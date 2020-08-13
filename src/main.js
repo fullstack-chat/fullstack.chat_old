@@ -14,6 +14,11 @@ export default function (Vue, { router, head, isClient }) {
     rel: 'stylesheet',
     href: 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'
   })
+
+  head.link.push({
+    rel: 'stylesheet',
+    href: 'https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&display=swap'
+  })
   // Add an external JavaScript before the closing </body> tag
   head.script.push({
     src: 'https://code.jquery.com/jquery-3.5.1.slim.min.js',

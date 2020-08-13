@@ -1,29 +1,21 @@
 <template>
-  <div class="container main">
-    <!-- <header class="header">
-      <strong>
-        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
-      </strong>
-    </header> -->
+  <div class="main">
     <slot/>
   </div>
 </template>
 
-<static-query>
-query {
-  metadata {
-    siteName
-  }
-}
-</static-query>
-
 <style>
 body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-family: 'Open Sans', sans-serif;
   margin:0;
   padding: 0px 0px 20px 0px;
   line-height: 1.5;
-  background-image: url("/assets/images/bg-image.png");
+  background-color: #000F14 !important;
+}
+
+h1, h2 {
+  font-family: 'Lato', monospace;
+  color: white;
 }
 
 .layout {
