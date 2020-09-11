@@ -173,7 +173,7 @@
               Active members are eligble for a regular, free giveaway hosted every other month. Giveaways are generally courses or other learning material to help you grow!
             </p>
             <h4>Current Giveaway:</h4>
-            <p><a href="https://www.udemy.com/course/70533-azure/" target="_blank">AZ-103 / AZ-104 Azure Administrator Exam Certification 2020</a></p>
+            <p>There is no giveaway at this moment. Join the Discord to be notified of future giveaways!</p>
           </div>
         </div>
         <div class="col-md-4">
