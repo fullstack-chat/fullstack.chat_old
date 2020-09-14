@@ -222,7 +222,15 @@ query {
 <script>
 export default {
   metaInfo: {
-    title: 'fullstack.chat'
+    title: 'fullstack.chat',
+    meta: [
+      { name: 'og:title', content: `fullstack.chat` },
+      { name: 'og:description', content: 'We are a welcome and opening community of developers of all skillsets and experience levels.' },
+      { name: 'og:url', content: `https://fullstack.chat` },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'og:site_name', content: 'fullstack.chat' },
+      { name: 'og:image', content: 'https://fullstack.chat/assets/images/og-image.png' }
+    ]
   },
   data: function () {
     return {
