@@ -1,6 +1,9 @@
 <template>
   <div class="main">
     <slot/>
+    <div class="footer">
+      <span class="copyright-and-docs">© {{new Date().getFullYear()}}&nbsp;•<a href="https://www.notion.so/fullstackchat/Docs-9c3f2a571b6a4801b26ced27eb45cf90" target="_blank">📙 Docs</a></span>
+    </div>
   </div>
 </template>
 
@@ -36,4 +39,20 @@ h1, h2 {
 .nav__link {
   margin-left: 20px;
 }
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding-top: 20px;
+}
+
+.copyright-and-docs {
+  color: white;
+}
+
+.copyright-and-docs a {
+  margin-left: 5px;
+}
+
 </style>

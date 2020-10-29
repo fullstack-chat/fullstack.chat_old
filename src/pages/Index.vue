@@ -422,4 +422,8 @@ code {
   height: 200px;
 }
 
+
+.agree-to-rules-check {
+  padding-right: 10px;
+}
 </style>
