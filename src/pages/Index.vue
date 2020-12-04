@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <div class="container-wrapper" >
+    <div class="container-wrapper">
       <div class="container-fluid">
         <div class="row justify-content-center">
           <div class="col-md-2">
@@ -421,7 +421,6 @@ code {
 .small-screen-spacer {
   height: 200px;
 }
-
 
 .agree-to-rules-check {
   padding-right: 10px;

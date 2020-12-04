@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Brian Morrison II",
+    "imageUrl": "https://cdn.onlinewebfonts.com/svg/img_305447.png", 
+    "bio": "I do stuff",
+    "links" : {
+      "website": "https://brianmorrison.me",
+      "twitter": "brianmmdev",
+      "github": "bmorrisondev"
+    }
+  }
+]
