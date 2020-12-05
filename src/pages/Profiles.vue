@@ -1,37 +1,66 @@
 <template>
-  <div class="container-wrapper">
-    <div class="container">
-      <div class="col-md-4" v-for="(p, index) in profiles" :key="index">
-        <div class="profile-card">
-          <div class="profile-img">
-            <img class="img-fluid" :src="p.imageUrl" />
+  <Layout>
+    <div class="container-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Member Profiles</h1>
           </div>
-          <div class="name">{{ p.name.substring(0, 140) }}</div>
-          <div class="bio">
-            {{ p.bio }}
-          </div>
-          <div class="links">
-            <div class="link" v-for="(key, index) in p.links" :key="index">
-              <a :href="p.links[key]">
-                {{ key }}
-                <img :src="`/assets/images/socials/${key}.png`" />
-              </a>
+          <div class="col-md-4" v-for="(p, index) in profiles" :key="index">
+            <div class="profile-card">
+              <div class="profile-img">
+                <img class="img-fluid" :src="p.imageUrl" />
+              </div>
+              <div class="name">{{ p.name }}</div>
+              <div class="bio">
+                {{ p.bio.length > 80 ? `${p.bio.substring(0, 77)}...` : p.bio }}
+              </div>
+              <div class="links">
+                <div class="link" v-for="(key, index) in Object.keys(p.links)" :key="index">
+                  <a :href="generateLink(key, p.links[key])" target="_blank">
+                    <img :src="`/assets/images/socials/${key}.png`" />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+
+  </Layout>
 </template>
 
 <script>
+import Nav from "@/components/Nav.vue"
 import profiles from '@/data/profiles.json'
 import githubLogo from "super-tiny-icons/images/svg/github.svg";
 
 export default {
+  components: {
+    Nav
+  },
   data() {
     return {
       profiles
+    }
+  },
+
+  methods: {
+    generateLink(key, value) {
+      if(key === "github") {
+        console.log("github")
+        return `https://github.com/${value}`
+      }
+
+      if(key === "website") {
+        return value
+      }
+
+      if(key === "twitter") {
+        value = value.replace("@", "")
+        return `https://twitter.com/${value}`
+      }
     }
   }
 }
@@ -39,12 +68,15 @@ export default {
 
 <style scoped>
 .profile-card {
-  background-color: red;
   margin: 10px;
   padding: 5px;
-  border-radius: 15px;
   display: flex;
   flex-direction: column;
+  color: #fff;
+  border: 2px solid #003459;
+  background-color: rgba(0,52,89,.6);
+  border-radius: 15px;
+  min-height: 260px;
 }
 
 .name {
@@ -59,16 +91,18 @@ export default {
   align-items: center;
   width: 100%;
   padding: 10px;
-  border-radius: 15px;
 }
 
 .profile-img img {
-  max-height: 75px;
-  max-width: 75px;
+  height: 75px;
+  width: 75px;
+  border-radius: 100px;
+  border: 3px solid #003459;
 }
 
 .bio {
   padding: 10px 20px;
+  flex: 1;
 }
 
 .links {
@@ -78,7 +112,7 @@ export default {
 }
 
 .link {
-  border-left: 1px solid blue;
+  border-left: 1px solid #003459;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -86,8 +120,9 @@ export default {
 }
 
 .link img {
-  max-height: 40px;
-  max-width: 40px;
+  max-height: 25px;
+  max-width: 25px;
+  margin-bottom: 5px;
 }
 
 .link:first-child {

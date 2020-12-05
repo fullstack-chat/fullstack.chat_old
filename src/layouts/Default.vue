@@ -1,11 +1,25 @@
 <template>
   <div class="main">
+    <Nav :isLogoHidden="hideLogo"/>
     <slot/>
     <div class="footer">
       <span class="copyright-and-docs">© {{new Date().getFullYear()}}&nbsp;•<a href="https://www.notion.so/fullstackchat/Docs-9c3f2a571b6a4801b26ced27eb45cf90" target="_blank">📙 Docs</a></span>
     </div>
   </div>
 </template>
+
+<script>
+import Nav from '@/components/Nav.vue'
+
+export default {
+  components: {
+    Nav
+  },
+  props: {
+    hideLogo: Boolean
+  }
+}
+</script>
 
 <style>
 body {
