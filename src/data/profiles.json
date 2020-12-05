@@ -8,5 +8,18 @@
       "twitter": "brianmmdev",
       "github": "bmorrisondev"
     }
+  },
+  {
+    "name": "Michael Hall",
+    "imageUrl": "https://github.com/pebcakpro/cv/blob/master/Profile%20Image.png", 
+    "bio": "Old guy - Changing careers to full stack developer.",
+    "links" : {
+      "website": "https://pebcakpro.github.io/cv/",
+      "twitter": "@pebcakpro",
+      "github": "pebcakpro"
+    }
   }
 ]
+
+
+
