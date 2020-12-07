@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <Layout hideLogo>
     <div class="container-wrapper">
       <div class="container-fluid">
         <div class="row justify-content-center">
@@ -245,184 +245,149 @@ export default {
 }
 </script>
 
-<style>
-a {
-  color: white !important;
-  border-bottom: 2px solid #00a8e8;
-}
+<style lang="sass" scoped>
+a 
+  color: white !important
+  border-bottom: 2px solid #00a8e8
 
-a:hover {
-  text-decoration: none !important;
-  border-bottom: 2px solid #003459;
-}
+a:hover 
+  text-decoration: none !important
+  border-bottom: 2px solid #003459
 
-.section-link {
-  margin-right: 10px;
-}
+.section-link 
+  margin-right: 10px
 
-.logo {
-  max-width: 250px;
-  margin-left: auto;
-  display: block;
-}
+.logo 
+  // max-width: 250px
+  margin-left: auto
+  display: block
 
-.logo-sm-screen {
-  max-width: 250px;
-  align-content: right;
-  /* margin: 20px auto; */
-  margin: 0px auto;
-  display: block;
-}
+.logo-sm-screen 
+  // max-width: 250px
+  align-content: right
+  /* margin: 20px auto; *
+  margin: 0px auto
+  display: block
 
-.full-height-row {
-  height: 100vh;
-}
+.full-height-row 
+  height: 100vh
 
-.activity-container { 
-  color: white;
-  border: 2px solid #003459;
-  background-color: rgba(0, 52, 89, 0.6);
-  border-radius: 15px;
-  padding: 20px;
-  margin: 10px auto;
-  height: 90%;
-}
+.activity-container
+  color: white
+  border: 2px solid #003459
+  background-color: rgba(0, 52, 89, 0.6)
+  border-radius: 15px
+  padding: 20px
+  margin: 10px auto
+  height: 90%
 
-.container-wrapper {
-  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
-  min-height: 100vh; /* These two lines are counted as one :-)       */
-  display: flex;
-  align-items: center;
-}
+.container-wrapper 
+  min-height: 100%;  // /* Fallback for browsers do NOT support vh unit *
+  min-height: 100vh; // /* These two lines are counted as one :-)       *
+  display: flex
+  align-items: center
 
-h1, h2, h3, h4, h5, h6 {
-  display: inline-block;
-}
+h1, h2, h3, h4, h5, h6 
+  display: inline-block
 
-h1, h2, .section-header {
-  margin: 0 auto 10px auto;
-  padding: 15px 0px;
-  border-bottom: 2px solid #FF8500;
-}
+h3 
+  color: white
 
-h3 {
-  color: white;
-}
+code 
+  background-color: rgba(0, 52, 89, 0.6)
+  border-radius: 5px
+  padding: 0px 2px
+  color: #FF8500 !important
 
-code {
-  background-color: rgba(0, 52, 89, 0.6);
-  border-radius: 5px;
-  padding: 0px 2px;
-  color: #FF8500 !important;
-}
+.centered-header 
+  text-align: center
 
-.centered-header {
-  text-align: center;
-}
+.section 
+  min-height: 550px
 
-.section {
-  min-height: 550px;
-}
+.welcome-col 
+  display: flex
+  flex-direction: row
 
-.welcome-col {
-  display: flex;
-  flex-direction: row;
-}
+.welcome-content 
+  padding: 0px 20px
+  margin-top: auto
+  margin-bottom: auto
 
-.welcome-content {
-  padding: 0px 20px;
-  margin-top: auto;
-  margin-bottom: auto;
-}
+.welcome-text 
+  color: white
+  font-size: 22px
+  margin-bottom: 20px
 
-.welcome-text {
-  color: white;
-  font-size: 22px;
-  margin-bottom: 20px;
-}
+.rules-intro 
+  color: white
+  margin: 10px 0px 20px 0px
 
-.rules-intro {
-  color: white;
-  margin: 10px 0px 20px 0px;
-}
+.rules-container 
+  color: white
+  /* border: 2px solid #003459; *
+  background-color: rgba(0, 0, 0, 0.6)
+  border-radius: 15px
+  padding: 20px
+  margin: 10px auto
 
-.rules-container {
-  color: white;
-  /* border: 2px solid #003459; */
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 15px;
-  padding: 20px;
-  margin: 10px auto;
-}
+.agree-to-rules-check 
+  color: white
+  margin: 10px 0px
 
-.agree-to-rules-check {
-  color: white;
-  margin: 10px 0px;
-}
+.agree-to-rules-button 
+  background-color: #00A8E8 !important
+  color: white !important
 
-.agree-to-rules-button {
-  background-color: #00A8E8 !important;
-  color: white !important;
-}
+.chat-bubble 
+  display: flex
+  background-color: #36393F
+  color: white
+  border-radius: 5px
+  margin-bottom: 5px
 
-.chat-bubble {
-  display: flex;
-  background-color: #36393F;
-  color: white;
-  border-radius: 5px;
-  margin-bottom: 5px;
-}
+.chat-bubble .avatar 
+  background-color: white
+  border-radius: 100%
+  height: 50px
+  width: 50px
+  padding: 10px
+  margin: 5px
 
-.chat-bubble .avatar {
-  background-color: white;
-  border-radius: 100%;
-  height: 50px;
-  width: 50px;
-  padding: 10px;
-  margin: 5px;
-}
+.chat-bubble .text-area 
+  font-size: 14px
 
-.chat-bubble .text-area {
-  font-size: 14px;
-}
+.chat-bubble .username 
+  padding-top: 1px
+  font-weight: bold
 
-.chat-bubble .username {
-  padding-top: 1px;
-  font-weight: bold;
-}
+.chat-bubble .text-area .text 
+  margin-top: -1px
+  line-height: 16px
 
-.chat-bubble .text-area .text {
-  margin-top: -1px;
-  line-height: 16px;
-}
+.bot-logo-container 
+  min-height: 400px
 
-.bot-logo-container {
-  min-height: 400px;
-}
+.bot-logo 
+  animation: MoveUpDown 4s linear infinite
+  position: absolute
+  left: 0
+  top: 0
+  backface-visibility: hidden
+  perspective: 1000
 
-.bot-logo {
-  animation: MoveUpDown 4s linear infinite;
-  position: absolute;
-  left: 0;
-  top: 0;
-  backface-visibility: hidden;
-  perspective: 1000;
-}
+@keyframes MoveUpDown 
+  0%, 100% 
+    transform: translate(0, 0)
+  
+  50% 
+    transform: translate(0, 10px)
+  
 
-@keyframes MoveUpDown {
-  0%, 100% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(0, 10px);
-  }
-}
+.small-screen-spacer 
+  height: 200px
 
-.small-screen-spacer {
-  height: 200px;
-}
+.agree-to-rules-check 
+  padding-right: 10px
 
-.agree-to-rules-check {
-  padding-right: 10px;
-}
 </style>
