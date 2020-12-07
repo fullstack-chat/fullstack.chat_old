@@ -28,60 +28,51 @@ export default {
 }
 </script>
 
-<style>
-.nav-row {
-  padding: 10px;
-  display: flex;
-}
+<style lang="sass" scoped>
+.nav-row 
+  padding: 10px
+  display: flex
+  height: 66px
 
-.nav-left, .nav-right {
-  flex: 1;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
+.nav-left, .nav-right 
+  flex: 1
+  display: flex
+  flex-direction: row
+  align-items: center
 
-.nav-right {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
+.nav-left
+  .title 
+    font-size: 28px
+    color: white
+    padding-left: 20px
 
-.nav-right ul {
-  margin: inherit;
-}
+  .nav-logo 
+    max-width: 50px !important
 
-.title {
-  font-size: 28px;
-  color: white;
-  padding-left: 20px;
-}
+  a
+    text-decoration: none !important
 
-.nav-logo {
-  max-width: 50px !important;
-}
+.nav-right
+  justify-content: flex-end
+  
+  ul 
+    margin: inherit
 
-.nav-logo a {
-  text-decoration: none !important;
-}
+  .nav-links 
+    a 
+      color: white
+      text-decoration: none
+      font-size: 18px
+      
+    a:hover 
+      color: white
+      text-decoration: underline
 
-.nav-left a:hover {
-  text-decoration: none !important;
-}
+  .bullet 
+    color: white
+    padding: 0px 7px
 
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-}
 
-.nav-links a:hover {
-  color: white;
-  text-decoration: underline;
-}
 
-.bullet {
-  color: white;
-  padding: 0px 7px;
-}
+
 </style>

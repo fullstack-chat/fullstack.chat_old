@@ -1,33 +1,30 @@
 <template>
   <Layout>
-    <div class="container-wrapper">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h1>Member Profiles</h1>
-          </div>
-          <div class="col-md-4" v-for="(p, index) in profiles" :key="index">
-            <div class="profile-card">
-              <div class="profile-img">
-                <img class="img-fluid" :src="p.imageUrl" />
-              </div>
-              <div class="name">{{ p.name }}</div>
-              <div class="bio">
-                {{ p.bio.length > 80 ? `${p.bio.substring(0, 77)}...` : p.bio }}
-              </div>
-              <div class="links">
-                <div class="link" v-for="(key, index) in Object.keys(p.links)" :key="index">
-                  <a :href="generateLink(key, p.links[key])" target="_blank">
-                    <img :src="`/assets/images/socials/${key}.png`" />
-                  </a>
-                </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Member Profiles</h1>
+        </div>
+        <div class="col-md-4" v-for="(p, index) in profiles" :key="index">
+          <div class="profile-card">
+            <div class="profile-img">
+              <img class="img-fluid" :src="p.imageUrl" />
+            </div>
+            <div class="name">{{ p.name }}</div>
+            <div class="bio">
+              {{ p.bio.length > 80 ? `${p.bio.substring(0, 77)}...` : p.bio }}
+            </div>
+            <div class="links">
+              <div class="link" v-for="(key, index) in Object.keys(p.links)" :key="index">
+                <a :href="generateLink(key, p.links[key])" target="_blank">
+                  <img :src="`/assets/images/socials/${key}.png`" />
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
   </Layout>
 </template>
 
@@ -66,66 +63,57 @@ export default {
 }
 </script>
 
-<style scoped>
-.profile-card {
-  margin: 10px;
-  padding: 5px;
-  display: flex;
-  flex-direction: column;
-  color: #fff;
-  border: 2px solid #003459;
-  background-color: rgba(0,52,89,.6);
-  border-radius: 15px;
-  min-height: 260px;
-}
+<style lang="sass" scoped>
+.profile-card
+  margin: 10px
+  padding: 5px
+  display: flex
+  flex-direction: column
+  color: #fff
+  border: 2px solid #003459
+  background-color: rgba(0,52,89,.6)
+  border-radius: 15px
+  min-height: 260px
 
-.name {
-  font-weight: bold;
-  font-size: 1.1em;
-  text-align: center;
-}
+.name
+  font-weight: bold
+  font-size: 1.1em
+  text-align: center
 
-.profile-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 10px;
-}
+.profile-img
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 100%
+  padding: 10px
 
-.profile-img img {
-  height: 75px;
-  width: 75px;
-  border-radius: 100px;
-  border: 3px solid #003459;
-}
+  img 
+    height: 75px
+    width: 75px
+    border-radius: 100px
+    border: 3px solid #003459
 
-.bio {
-  padding: 10px 20px;
-  flex: 1;
-}
+.bio 
+  padding: 10px 20px
+  flex: 1
 
-.links {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
+.links 
+  display: flex
+  flex-direction: row
+  justify-content: space-evenly
 
-.link {
-  border-left: 1px solid #003459;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
+.link 
+  border-left: 1px solid #003459
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 100%
 
-.link img {
-  max-height: 25px;
-  max-width: 25px;
-  margin-bottom: 5px;
-}
+  &:first-child
+    border-left: none !important
 
-.link:first-child {
-  border-left: none !important
-}
+  img
+    max-height: 25px
+    max-width: 25px
+    margin-bottom: 5px
 </style>
